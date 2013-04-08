@@ -32,3 +32,23 @@ also, it does not handle things like if statements.
 can become:
 	cout << "a is true" << endl;
 	if(true == a)
+
+A new option has been added:
+#define BETWEENRANDOMS
+
+Example:
+	#define BETWEENRANDOMS cout << "Look at me << endl;
+	#define RANDOMCODE
+	cout <<"test1"<<endl;
+	cout <<"test2"<<endl;
+	cout <<"test3"<<endl;
+	#define ENDRANDOMCODE
+becomes
+	#define RANDOMCODE
+	cout << "Look at me << endl;
+	cout <<"test1"<<endl;
+	cout << "Look at me << endl;
+	cout <<"test3"<<endl;
+	cout << "Look at me << endl;
+	cout <<"test2"<<endl;
+	#define ENDRANDOMCODE
